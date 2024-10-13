@@ -1,0 +1,53 @@
+/* Login.css */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height to center the form */
+    background-color: #f0f4f8; /* Light background color */
+  }
+  
+  h2 {
+    color: #333; /* Darker color for the heading */
+    margin-bottom: 10px; /* Reduced margin for closer positioning */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Set a fixed width for the form */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; /* White background for the form */
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px;
+  }
+  
+  input:focus {
+    border-color: #007bff; /* Highlight border color on focus */
+    outline: none; /* Remove outline */
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for button */
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
