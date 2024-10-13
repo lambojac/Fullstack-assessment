@@ -1,0 +1,90 @@
+/* ProjectList.css */
+
+/* Overall container styling */
+div {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Heading */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  thead {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Row hover effect */
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Alternating row colors */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Styling for table data */
+  td {
+    color: #555;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  tbody tr td:nth-child(3), /* Status */
+  tbody tr td:nth-child(4)  /* Priority */ {
+    font-weight: bold;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    th {
+      display: none;
+    }
+  
+    tr {
+      margin-bottom: 15px;
+    }
+  
+    td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-right: 10px;
+    }
+  }
+  
