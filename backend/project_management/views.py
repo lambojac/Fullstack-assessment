@@ -22,10 +22,12 @@ class ProjectListCreateView(APIView):
         if request.user.is_staff:
             serializer = ProjectSerializer(data=request.data)
             if serializer.is_valid():
+                # Automatically set 'created_by' to the currently logged-in admin user
                 serializer.save(created_by=request.user)
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
+
 
 class ProjectDetailView(APIView):
     permission_classes = [IsAuthenticated]
